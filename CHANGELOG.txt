@@ -1,0 +1,12 @@
+2.0.1
+- Dropped MyBB 1.4 support
+- Optimization and general plugin updating
+
+2.0
+- Updated plugin to work with MyBB 1.6
+
+1.0.1
+- Updated Setting to always be added to Posting setting group, even if it isn't group 13.
+
+1.0
+- Initial release
