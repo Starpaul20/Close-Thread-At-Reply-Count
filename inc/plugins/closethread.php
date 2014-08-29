@@ -1,7 +1,7 @@
 <?php
 /**
  * Close Thread At Reply Count
- * Copyright 2010 Starpaul20
+ * Copyright 2009 Starpaul20
  */
 
 // Disallow direct access to this file for security reasons
@@ -16,9 +16,12 @@ $plugins->add_hook("newreply_do_newreply_end", "closethread_run");
 // The information that shows up on the plugin manager
 function closethread_info()
 {
+	global $lang;
+	$lang->load("closethread", true);
+
 	return array(
-		"name"				=> "Close Thread At Reply Count",
-		"description"		=> "Allows you to have threads automatically closed upon reaching a certain amount of replies.",
+		"name"				=> $lang->closethread_info_name,
+		"description"		=> $lang->closethread_info_desc,
 		"website"			=> "http://galaxiesrealm.com/index.php",
 		"author"			=> "Starpaul20",
 		"authorsite"		=> "http://galaxiesrealm.com/index.php",
