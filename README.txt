@@ -1,13 +1,15 @@
 ## INFORMATION ##
 
-Close Thread at Reply Count (2.0.1) for MyBB 1.6
+Close Thread at Reply Count (1.0) for MyBB 1.8
 Created by: Starpaul20
 Copyright: ©2009
 License: GPL
 
 Allows you to have threads automatically closed upon reaching a certain amount of replies (which can be set in the settings). Please note this plugin will only close a thread when it is posted in (any thread not posted in will remain open).
 
-The setting for this is located at the bottom of the 'Posting' setting group
+The setting for this is located at the bottom of the 'Posting' setting group.
+
+The 'oldrelease' branch contains the 1.6 version of the plugin.
 
 
 ## INSTALLATION ##
