@@ -1,17 +1,17 @@
-1.0
+1.0 (August 29th, 2014)
 - Updated plugin to work with MyBB 1.8
 
 ## Version number reset for MyBB 1.8 ##
 
-2.0.1
+2.0.1 (October 2nd, 2011)
 - Dropped MyBB 1.4 support
 - Optimization and general plugin updating
 
-2.0
+2.0 (August 5th, 2010)
 - Updated plugin to work with MyBB 1.6
 
-1.0.1
+1.0.1 (December 19th, 2009)
 - Updated Setting to always be added to Posting setting group, even if it isn't group 13.
 
-1.0
+1.0 (July 25th, 2009)
 - Initial release
