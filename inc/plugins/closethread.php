@@ -35,7 +35,7 @@ function closethread_activate()
 {
 	global $db;
 	$query = $db->simple_select("settinggroups", "gid", "name='posting'");
-	$gid = intval($db->fetch_field($query, "gid"));
+	$gid = $db->fetch_field($query, "gid");
 
 	$insertarray = array(
 		'name' => 'maxreplycount',
@@ -43,8 +43,8 @@ function closethread_activate()
 		'description' => 'The maximum amount of replies that can be added to a thread before it is closed. 0 for unlimited.',
 		'optionscode' => 'text',
 		'value' => 1500,
-		'disporder' => 26,
-		'gid' => $gid
+		'disporder' => 23,
+		'gid' => (int)$gid
 	);
 	$db->insert_query("settings", $insertarray);
 
@@ -66,15 +66,15 @@ function closethread_run()
 	global $mybb, $db;
 	if($mybb->settings['maxreplycount'] > 0)
 	{
-		$query = $db->simple_select("posts", "COUNT(*) AS max_replies", "tid='".intval($mybb->input['tid'])."'");
+		$query = $db->simple_select("posts", "COUNT(*) AS max_replies", "tid='".(int)$mybb->input['tid']."'");
 		$reply_count = $db->fetch_field($query, "max_replies");
 
-		if($reply_count-1 >= intval($mybb->settings['maxreplycount']))
+		if($reply_count-1 >= (int)$mybb->settings['maxreplycount'])
 		{
 			$closethread = array(
 				"closed" => 1,
 			);
-			$db->update_query("threads", $closethread, "tid='".intval($mybb->input['tid'])."'");
+			$db->update_query("threads", $closethread, "tid='".(int)$mybb->input['tid']."'");
 		}
 	}
 }
