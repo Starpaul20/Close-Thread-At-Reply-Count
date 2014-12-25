@@ -26,6 +26,7 @@ function closethread_info()
 		"author"			=> "Starpaul20",
 		"authorsite"		=> "http://galaxiesrealm.com/index.php",
 		"version"			=> "1.0",
+		"codename"			=> "closethread",
 		"compatibility"		=> "18*"
 	);
 }
