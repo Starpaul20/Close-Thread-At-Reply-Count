@@ -67,7 +67,8 @@ function closethread_run()
 	global $mybb, $db;
 	if($mybb->settings['maxreplycount'] > 0)
 	{
-		$query = $db->simple_select("posts", "COUNT(*) AS max_replies", "tid='".(int)$mybb->input['tid']."'");
+		$tid = $mybb->get_input('tid', MyBB::INPUT_INT);
+		$query = $db->simple_select("posts", "COUNT(*) AS max_replies", "tid='{$tid}'");
 		$reply_count = $db->fetch_field($query, "max_replies");
 
 		if($reply_count-1 >= (int)$mybb->settings['maxreplycount'])
@@ -75,7 +76,7 @@ function closethread_run()
 			$closethread = array(
 				"closed" => 1,
 			);
-			$db->update_query("threads", $closethread, "tid='".(int)$mybb->input['tid']."'");
+			$db->update_query("threads", $closethread, "tid='{$tid}'");
 		}
 	}
 }
