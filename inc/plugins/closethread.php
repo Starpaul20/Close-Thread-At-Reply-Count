@@ -42,7 +42,8 @@ function closethread_activate()
 		'name' => 'maxreplycount',
 		'title' => 'Maximum Number of Replies',
 		'description' => 'The maximum amount of replies that can be added to a thread before it is closed. 0 for unlimited.',
-		'optionscode' => 'numeric',
+		'optionscode' => 'numeric
+min=0',
 		'value' => 1500,
 		'disporder' => 23,
 		'gid' => (int)$gid
