@@ -1,3 +1,8 @@
+1.2 (June 23rd, 2021)
+- Updated numeric settings
+- Removed PHP closing tags
+- Adding License file
+
 1.1 (March 2nd, 2015)
 - Updated setting type
 - Changed (int)$mybb->input to $mybb->get_input
